@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Run VoLTE SIP Tests') {
+            steps {
+                dir('volte-sip-automation') {
+                    sh '''
+                        echo "Running VoLTE SIP automation tests"
+                        robot robot/
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'volte-sip-automation/*.xml, volte-sip-automation/*.html', allowEmptyArchive: true
+        }
+        success {
+            echo "✅ VoLTE SIP Automation PASSED"
+        }
+        failure {
+            echo "❌ VoLTE SIP Automation FAILED"
+        }
+    }
+}
