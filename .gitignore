@@ -1,24 +1,15 @@
-# Binaries
-minikube*
-kubectl*
-*.bin
+# Kubernetes / Minikube binaries
+minikube
+minikube-linux-amd64
 
-# Python
+# Robot outputs
+output.xml
+log.html
+report.html
+nohup.out
+
+# Python cache
 __pycache__/
 *.pyc
 .venv/
 
-# Robot Framework
-output.xml
-log.html
-report.html
-
-# Logs
-*.log
-nohup.out
-
-# Docker
-*.tar
-
-# OS
-.DS_Store
