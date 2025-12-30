@@ -1,6 +1,7 @@
 # Kubernetes / Minikube binaries
 minikube
 minikube-linux-amd64
+cnf-5g-lab/minikube
 
 # Robot outputs
 output.xml
