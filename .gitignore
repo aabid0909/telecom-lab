@@ -1,16 +1,16 @@
-# Kubernetes / Minikube binaries
-minikube
-minikube-linux-amd64
-cnf-5g-lab/minikube
-
-# Robot outputs
+# Logs & reports
+*.log
 output.xml
-log.html
 report.html
+log.html
 nohup.out
 
-# Python cache
+# Python
 __pycache__/
 *.pyc
 .venv/
+
+# Kubernetes / binaries
+minikube*
+kubectl*
 
