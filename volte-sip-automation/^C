@@ -1,0 +1,9 @@
+import subprocess
+
+def run_volte_call():
+    result = subprocess.run(
+        ["sipp", "127.0.0.1", "-sf", "sipp/volte_call.xml", "-m", "1"],
+        capture_output=True,
+        text=True
+    )
+    return "200 OK" in result.stdout

@@ -1,0 +1,15 @@
+# Robot Framework outputs
+output.xml
+log.html
+report.html
+
+# SIPp logs
+*_messages.log
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jenkins
+jenkins/
+logs/

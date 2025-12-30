@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="VoLTE Call">
+
+  <send retrans="500">
+    <![CDATA[
+    INVITE sip:[service]@[remote_ip]:[remote_port] SIP/2.0
+    Via: SIP/2.0/UDP [local_ip]:[local_port]
+    From: <sip:ue1@[local_ip]>;tag=1234
+    To: <sip:ue2@[remote_ip]>
+    Call-ID: 987654@[local_ip]
+    CSeq: 1 INVITE
+    Contact: <sip:ue1@[local_ip]>
+    Content-Length: 0
+    ]]>
+  </send>
+
+  <recv response="100"/>
+  <recv response="180"/>
+  <recv response="200"/>
+
+  <send>
+    <![CDATA[
+    ACK sip:[service]@[remote_ip] SIP/2.0
+    ]]>
+  </send>
+
+  <pause milliseconds="3000"/>
+
+  <send>
+    <![CDATA[
+    BYE sip:[service]@[remote_ip] SIP/2.0
+    ]]>
+  </send>
+
+  <recv response="200"/>
+
+</scenario>

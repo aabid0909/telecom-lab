@@ -1,0 +1,17 @@
+import subprocess
+
+def run_volte_call():
+    try:
+        result = subprocess.run(
+            ["sipp", "127.0.0.1", "-sf", "sipp/volte_call.xml", "-m", "1"],
+            capture_output=True,
+            text=True
+        )
+
+        # SIPp returns 0 when call succeeds
+        return result.returncode == 0
+
+    except Exception as e:
+        print("Error running SIPp:", e)
+        return False
+
