@@ -1,0 +1,24 @@
+# Binaries
+minikube*
+kubectl*
+*.bin
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Robot Framework
+output.xml
+log.html
+report.html
+
+# Logs
+*.log
+nohup.out
+
+# Docker
+*.tar
+
+# OS
+.DS_Store
