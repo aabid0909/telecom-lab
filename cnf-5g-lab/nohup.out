@@ -1,0 +1,38 @@
+ * Serving Flask app 'smf_api'
+ * Debug mode: off
+ * Serving Flask app 'amf_api'
+ * Debug mode: off
+Address already in use
+Port 8000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.128.0.2:8001
+Press CTRL+C to quit
+ * Serving Flask app 'smf_api'
+ * Debug mode: off
+ * Serving Flask app 'amf_api'
+ * Debug mode: off
+Address already in use
+Port 8001 is in use by another program. Either identify and stop that program, or start the server with a different port.
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.128.0.2:8000
+Press CTRL+C to quit
+127.0.0.1 - - [27/Dec/2025 07:26:13] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [27/Dec/2025 07:26:13] "POST /pdu-session HTTP/1.1" 201 -
+127.0.0.1 - - [27/Dec/2025 07:40:48] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [27/Dec/2025 07:59:05] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [27/Dec/2025 07:59:05] "POST /pdu-session HTTP/1.1" 201 -
+127.0.0.1 - - [27/Dec/2025 07:59:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [27/Dec/2025 07:59:49] "POST /pdu-session HTTP/1.1" 201 -
+127.0.0.1 - - [27/Dec/2025 15:51:21] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [27/Dec/2025 15:51:21] "GET /pdu-session HTTP/1.1" 405 -
+127.0.0.1 - - [27/Dec/2025 16:04:18] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [27/Dec/2025 16:04:18] "POST /pdu-session HTTP/1.1" 400 -
+127.0.0.1 - - [27/Dec/2025 16:16:28] "POST /pdu-session HTTP/1.1" 201 -
+127.0.0.1 - - [27/Dec/2025 16:17:17] "POST /pdu-session HTTP/1.1" 400 -
+127.0.0.1 - - [28/Dec/2025 19:20:56] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 07:32:48] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 07:38:42] "GET /health HTTP/1.1" 200 -
