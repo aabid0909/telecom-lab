@@ -1,0 +1,17 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: pcscf-latency
+  namespace: ims
+spec:
+  action: delay
+  mode: all
+  selector:
+    labelSelectors:
+      app: pcscf
+  delay:
+    latency: "150ms"
+    jitter: "20ms"
+    correlation: "25"
+  direction: to
+  duration: "120s"
