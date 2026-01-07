@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scscf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scscf
+  template:
+    metadata:
+      labels:
+        app: scscf
+    spec:
+      containers:
+      - name: scscf
+        image: scscf-cnf:1.0
+        ports:
+        - containerPort: 6060

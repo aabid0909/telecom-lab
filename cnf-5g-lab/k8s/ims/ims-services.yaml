@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pcscf-svc
+spec:
+  selector:
+    app: pcscf
+  ports:
+  - port: 5060
+    targetPort: 5060
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scscf-svc
+spec:
+  selector:
+    app: scscf
+  ports:
+  - port: 6060
+    targetPort: 6060
+
