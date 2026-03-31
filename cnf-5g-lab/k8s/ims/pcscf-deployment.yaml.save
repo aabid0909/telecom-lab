@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pcscf
-  namespace: ims
 spec:
   replicas: 2
   selector:
@@ -16,5 +15,6 @@ spec:
       containers:
       - name: pcscf
         image: pcscf-cnf:1.0
+        image
         ports:
         - containerPort: 5060

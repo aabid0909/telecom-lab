@@ -2,7 +2,7 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: NetworkChaos
 metadata:
   name: pcscf-loss-latency-to
-  namespace: ims
+  namespace: default
 spec:
   action: delay
   mode: all
