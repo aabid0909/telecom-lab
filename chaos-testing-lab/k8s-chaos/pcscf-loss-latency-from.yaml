@@ -1,20 +1,20 @@
-apiVersion: chaos-mesh.org/v1alpha1
-kind: NetworkChaos
-metadata:
-  name: pcscf-loss-latency-from
-  namespace: default
 spec:
   action: delay
   mode: all
+
   selector:
     labelSelectors:
       app: pcscf
+
+  target:
+    selector:
+      labelSelectors:
+        app: amf   # or smf / any other CNF
+
+  direction: both
+
   delay:
     latency: "200ms"
-    jitter: "50ms"
-    correlation: "30"
+
   loss:
     loss: "5"
-    correlation: "50"
-  direction: both
-  duration: "180s"
